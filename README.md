@@ -45,3 +45,13 @@ In the title bar various window charsets are displayed. See that they are 254 (n
 Even using 'en-US' or 'de-DE' as activecodepage shows the bug
 
 ![image info](./listview_win32_bug_utf8_legacy_1.png)
+
+# Even worse
+
+When changing in the file 'listview.rsrc.rc' the line
+
+    FONT 9, "Segoe UI", 0, 0, 0
+to
+    FONT 9, "Segoe UI", 0, 0, 1
+    
+The listview texts are wrong too!
