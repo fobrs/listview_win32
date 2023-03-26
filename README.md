@@ -9,6 +9,7 @@ First compile and run the listview.exe app on Windows11 with a system code page 
 
 You will see a window with a list control and some buttons and edit controls. In there you will see some texts with accented chars. As excepted.
 
+![image info](./listview_win32_bug_utf8_legacy_0.png)
 
 ### system code page UTF-8
 
@@ -43,3 +44,4 @@ In the title bar various window charsets are displayed. See that they are 254 (n
 
 Even using 'en-US' or 'de-DE' as activecodepage shows the bug
 
+![image info](./listview_win32_bug_utf8_legacy_1.png)
