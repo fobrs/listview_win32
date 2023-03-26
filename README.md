@@ -1,4 +1,4 @@
-# listview_win32
+# listview win32 app on UTF-8 system code page
 to demonstrate a UTF-8 system code page bug when using manifest activecodepage 'Legacy' on a win32 ANSI app
 
 
