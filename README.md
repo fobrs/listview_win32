@@ -41,5 +41,5 @@ Now run the app again. You will notice that the texts will not display the accen
 
 In the title bar various window charsets are displayed. See that they are 254 (new UTF-8 charset) but should be 0 (ANSI_CHARSET).
 
-Even using 'en-US'or 'de-DE' as activecodepage shows the bug
+Even using 'en-US' or 'de-DE' as activecodepage shows the bug
 
