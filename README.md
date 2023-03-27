@@ -57,12 +57,14 @@ to DEFAULT_CHARSET (1)
     
 The listview texts are wrong too!
 
-Trying to call SetFont on an CEdit control with a font which has its charset set to ANSI_CHARSET doesn't help. Calling:
+Trying to call WM_SETFONT on an EDITTEXT control with a font which has its charset set to ANSI_CHARSET doesn't help. Calling:
 
    	auto hdc = m_edit.GetWindowDC();
 	auto charset = (BYTE)::GetTextCharsetInfo(hdc->GetSafeHdc(), NULL, 0);
     
-reveals 254! The new UTF8_CHARSET.
+reveals 254! The new UTF8_CHARSET. 
+
+What's really bad is that GetWindowText on the EDITTEXT returns a different string than originally given to SetWindowText!
 
 
 ![more bug](./listview_win32_bug_utf8_legacy_2.png)
