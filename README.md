@@ -59,8 +59,8 @@ The listview texts are wrong too!
 
 Trying to call WM_SETFONT on an EDITTEXT control with a font which has its charset set to ANSI_CHARSET doesn't help. Calling:
 
-   	auto hdc = m_edit.GetWindowDC();
-	auto charset = (BYTE)::GetTextCharsetInfo(hdc->GetSafeHdc(), NULL, 0);
+   	auto hdc = ::GetWindowDC(hWnd);
+	auto charset = (BYTE)::GetTextCharsetInfo(hdc, NULL, 0);
     
 reveals 254! The new UTF8_CHARSET. 
 
