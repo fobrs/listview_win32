@@ -1,6 +1,14 @@
 # listview win32 app on UTF-8 system code page
 to demonstrate a UTF-8 system code page bug when using manifest activecodepage 'Legacy' on a win32 ANSI app
 
+It's not a bug, but Microsoft should make GDI process ActiveCodePage aware! ASAP.
+### Note
+
+GDI doesn't currently support setting the ActiveCodePage property per process. Instead, GDI defaults to the active system codepage. To configure your app to render UTF-8 text via GDI, go to Windows Settings > Time & language > Language & region > Administrative language settings > Change system locale, and check Beta: Use Unicode UTF-8 for worldwide language support. Then reboot the PC for the change to take effect.
+
+### So?
+If you the set the system code page to UTF-8 al GDI rendering is done with UTF-8. Changing ActiveCodePage doesn't help here. If your app is in ANSI CP1252 it will not display ok!
+
 
 # reproduce 
 ### system code page 1252
